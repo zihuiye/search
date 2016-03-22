@@ -1,16 +1,27 @@
 <html>
  <head>
    <title>Search result</title>
+   <style type="text/css">
+      div.content {
+        padding-top: 10px;
+        padding-right: 20%;
+        padding-left: 20%;
+        padding-bottom: 5%;
+        
+        font-size:35px;
+        }
+      
+    </style>
  </head>
  <body>
+   <div id='content'>
    <volist name="res" id="res">
-  <div style="text-align:left">
+  <div id='item'>
     <a href='/Index/view/?filename={$res}'>
       {$res}
     </a>
-     
    </div> 
   </volist>
-   
+   </div>
  </body>
 </html>
