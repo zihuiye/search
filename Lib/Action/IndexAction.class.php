@@ -21,6 +21,7 @@ class IndexAction extends Action {
 	//echo $path.$filename;
 	$content = file_get_contents($path.$filename);
 	//echo $content;
+	$this->content = $content;
 	$this->display();
    }
 }
