@@ -9,8 +9,8 @@ class IndexAction extends Action {
 	//exec('export PATH=/home/ubuntu/myLucene/');
 	exec($comand,$res,$sta); 
 	
-	dump($res);
-	echo $sta;
+	//dump($res);
+	//echo $sta;
 	$result = array_slice($res,2);
 	$this->res=$result;
 	$this->display();
