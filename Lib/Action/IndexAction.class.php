@@ -20,7 +20,7 @@ class IndexAction extends Action {
 	$path = "/home/ubuntu/myLucene";
 	//echo $path.$filename;
 	$content = file_get_contents($path.$filename);
-	echo $content;
+	//echo $content;
 	$this->display();
    }
 }
