@@ -12,7 +12,7 @@ class IndexAction extends Action {
 	//dump($res);
 	//echo $sta;
 	$result = array_slice($res,2);
-	if($result==''){
+	if($result==NULL){
 		$result = "no result";
 	}
 	$this->res=$result;
