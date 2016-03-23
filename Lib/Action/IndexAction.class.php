@@ -15,7 +15,7 @@ class IndexAction extends Action {
 	dump($result);
 	echo count($result);
 	if(count($result)==0){
-		$result = "no result";
+		$result[0] = "no result";
 	}
 	$this->res=$result;
 	$this->display();
