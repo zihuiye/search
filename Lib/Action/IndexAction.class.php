@@ -14,7 +14,7 @@ class IndexAction extends Action {
 	$result = array_slice($res,2);
 	$head = array_slice($res,0,2);
 	if(count($result)==0){
-		$head[3] = "no result";
+		$head[3] = "</br></br><h1>no result</h1>";
 	}
 	$this->head=$head;
 	$this->res=$result;
