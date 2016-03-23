@@ -21,7 +21,7 @@ class IndexAction extends Action {
 	//echo $path.$filename;
 	$content = file_get_contents($path.$filename);
 	//echo $content;
-	$this->title = $filename;
+	$this->title = escapeshellarg($filename);
 	$this->content = $content;
 	$this->display();
    }
