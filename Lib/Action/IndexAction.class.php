@@ -12,11 +12,11 @@ class IndexAction extends Action {
 	//dump($res);
 	//echo $sta;
 	$result = array_slice($res,2);
-	dump($result);
-	echo count($result);
+	$head = array_slice($res,0,2);
 	if(count($result)==0){
 		$result[0] = "no result";
 	}
+	$this->head=$head;
 	$this->res=$result;
 	$this->display();
    }
