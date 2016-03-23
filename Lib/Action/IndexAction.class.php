@@ -13,7 +13,7 @@ class IndexAction extends Action {
 	//echo $sta;
 	$result = array_slice($res,2);
 	dump($result);
-	if($result==NULL){
+	if(count($result)==0){
 		$result = "no result";
 	}
 	$this->res=$result;
