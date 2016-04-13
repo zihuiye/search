@@ -21,7 +21,7 @@ class IndexAction extends Action {
 	$this->display();
    }
     public function view(){
-	$filename = substr($_GET["filename"],4);
+	$filename = substr($_GET["filename"],3);
 	$path = "/home/ubuntu/myLucene/";
 	echo $path.$filename;
 	$content = file_get_contents($path.$filename);
