@@ -22,7 +22,7 @@ class IndexAction extends Action {
    }
     public function view(){
 	$filename = substr($_GET["filename"],4);
-	$path = "/home/ubuntu/myLucene";
+	$path = "/home/ubuntu/myLucene/";
 	echo $path.$filename;
 	$content = file_get_contents($path.$filename);
 	//echo $content;
