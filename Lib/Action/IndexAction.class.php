@@ -17,7 +17,8 @@ class IndexAction extends Action {
 	$title=array();
 	foreach ($result as $key=>$line){
 		if ($key%2==0){
-			array_push($url,$line);
+			$line=explode(" ",$line);
+			array_push($url,$line[1]);
 		}else{
 			$line=explode(":",$line);
 			array_push($title,$line[1]);
