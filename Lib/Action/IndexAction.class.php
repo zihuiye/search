@@ -19,11 +19,10 @@ class IndexAction extends Action {
 		if ($key%2==0){
 			array_push($url,$line);
 		}else{
+			$line=explode(":",$line);
 			array_push($title,$line);
 		}
 	}
-	dump($url);
-	dump($title);
 	for($i = 0;$i<10;$i++){
 		$out[$i]["url"]=$url[$i];
 		$out[$i]["title"]=$title[$i];
@@ -33,9 +32,8 @@ class IndexAction extends Action {
 		$head[3] = "</br></br><h1>no result</h1>";
 	}
 	
-	dump($out);
 	$this->head=$head;
-	$this->res=$res;
+	$this->res=$out;
 	$this->display();
    }
     public function view(){
