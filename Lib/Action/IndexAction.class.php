@@ -14,11 +14,12 @@ class IndexAction extends Action {
 	$head = array_slice($res,0,2);
 	$result = array_slice($res,2);
 	$url=array();
+	$title=array();
 	foreach ($result as $key=>$line){
 		if ($key%2==0){
 			array_push($url,$line);
 		}else{
-			array_push($url,$line);
+			array_push($title,$line);
 		}
 	}
 	dump($url);
