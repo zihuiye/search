@@ -28,7 +28,7 @@ class IndexAction extends Action {
 	if(count($result)==0){
 		$head[3] = "</br></br><h1>no result</h1>";
 	}
-	dump($res)
+	dump($res);
 	$this->head=$head;
 	$this->res=$res;
 	$this->display();
