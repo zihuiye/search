@@ -20,6 +20,8 @@ class IndexAction extends Action {
 			$title.array_push($line);
 		}
 	}
+	dump($url);
+	dump($title);
 	for($i = 0;$i<10;$i++){
 		$out[$i]["url"]=$url[$i];
 		$out[$i]["title"]=$title[$i];
@@ -28,6 +30,7 @@ class IndexAction extends Action {
 	if(count($result)==0){
 		$head[3] = "</br></br><h1>no result</h1>";
 	}
+	
 	dump($out);
 	$this->head=$head;
 	$this->res=$res;
