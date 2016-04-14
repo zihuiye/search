@@ -21,14 +21,14 @@ class IndexAction extends Action {
 		}
 	}
 	for($i = 0;$i<10;$i++){
-		$res[$i]['url']=$url[$i];
-		$res[$i]['title']=$title[$i];
+		$out[$i]["url"]=$url[$i];
+		$out[$i]["title"]=$title[$i];
 	}
 	
 	if(count($result)==0){
 		$head[3] = "</br></br><h1>no result</h1>";
 	}
-	dump($res);
+	dump($out);
 	$this->head=$head;
 	$this->res=$res;
 	$this->display();
