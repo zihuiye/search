@@ -20,7 +20,7 @@ class IndexAction extends Action {
 			array_push($url,$line);
 		}else{
 			$line=explode(":",$line);
-			array_push($title,$line);
+			array_push($title,$line[1]);
 		}
 	}
 	for($i = 0;$i<10;$i++){
