@@ -24,11 +24,12 @@ class IndexAction extends Action {
 		$res[$i]['url']=$url[$i];
 		$res[$i]['title']=$title[$i];
 	}
+	
 	if(count($result)==0){
 		$head[3] = "</br></br><h1>no result</h1>";
 	}
 	$this->head=$head;
-	$this->res=$result;
+	$this->res=$res;
 	$this->display();
    }
     public function view(){
