@@ -38,7 +38,7 @@ class IndexAction extends Action {
    }
     public function view(){
 	
-	$filename = explode(".",$_GET["filename"])[1];
+	$filename = explode("%",$_GET["filename"])[1];
 	$path = "/home/ubuntu/myLucene/";
 	//echo $path.$filename;
 	$content = file_get_contents($path.$filename);
