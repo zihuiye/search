@@ -11,8 +11,19 @@ class IndexAction extends Action {
 	
 	//dump($res);
 	//echo $sta;
-	$result = array_slice($res,2);
 	$head = array_slice($res,0,2);
+	$result = array_slice($res,2);
+	foreach ($result as $key=>$line){
+		if ($key%2==0){
+			$url.array_push($line);
+		}else{
+			$title.array_push($line);
+		}
+	}
+	for($i = 0;$i<10;$i++){
+		$res[$i]['url']=$url[$i];
+		$res[$i]['title']=$title[$i];
+	}
 	if(count($result)==0){
 		$head[3] = "</br></br><h1>no result</h1>";
 	}
