@@ -15,6 +15,7 @@ class IndexAction extends Action {
 	$result = array_slice($res,2);
 	foreach ($result as $key=>$line){
 		if ($key%2==0){
+			print $key;
 			$url.array_push($line);
 		}else{
 			$title.array_push($line);
