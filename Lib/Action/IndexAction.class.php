@@ -5,8 +5,13 @@ class IndexAction extends Action {
    }
     public function search(){
 	$keyword = $_GET["keyword"];
+	$type = $_GET["type"];
 	$comand = "java -classpath '/home/ubuntu/myLucene:/usr/local/lucene-5.4.1/core/lucene-core-5.4.1.jar:/usr/local/lucene-5.4.1/analysis/common/lucene-analyzers-common-5.4.1.jar:/usr/local/lucene-5.4.1/queryparser/lucene-queryparser-5.4.1.jar' SearchFiles -index /home/ubuntu/myLucene/index -query ".escapeshellarg($keyword)." 2>&1"; 
 	//exec('export PATH=/home/ubuntu/myLucene/');
+	
+	dump($type);
+	
+	
 	exec($comand,$res,$sta); 
 	
 	//dump($res);
