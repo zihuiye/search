@@ -28,15 +28,15 @@ class IndexAction extends Action {
 	$result = array_slice($res,2);
 	$url=array();
 	$title=array();
-	foreach ($result as $key=>$line){
-		if ($key%2==0){
-			$line=explode(" ",$line);
-			array_push($url,$line[1]);
-		}else{
-			$line=explode(":",$line);
-			array_push($title,$line[1]);
-		}
+	
+	for($i = 0;$i<10;$i++){
+		$line=explode(" ",$result[$i*9]);
+		array_push($url,$line[1]);
+		$line=$result[$i*9+1].$result[$i*9+2].$result[$i*9+3].$result[$i*9+4].$result[$i*9+5].$result[$i*9+6].$result[$i*9+7];
+		array_push($title,$line[1]);
+		
 	}
+	
 	for($i = 0;$i<10;$i++){
 		$out[$i]["url"]=$url[$i];
 		$out[$i]["title"]=$title[$i];
