@@ -22,7 +22,7 @@ class IndexAction extends Action {
 	}
 	
 	
-	//dump($res);
+	dump($res);
 	//echo $sta;
 	$head = array_slice($res,0,2);
 	$result = array_slice($res,2);
