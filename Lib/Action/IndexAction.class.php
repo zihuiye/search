@@ -28,7 +28,7 @@ class IndexAction extends Action {
 	$result = array_slice($res,2);
 	$url=array();
 	$title=array();
-	
+	dump($result);
 	for($i = 0;$i<10;$i++){
 		$line=explode(" ",$result[$i*9]);
 		array_push($url,$line[1]);
