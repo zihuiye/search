@@ -28,7 +28,7 @@ class IndexAction extends Action {
 	$result = array_slice($res,2);
 	$url=array();
 	$title=array();
-	//dump($result);
+	dump($result);
 	for($i = 0;$i<10;$i++){
 		$line=explode(" ",$result[$i*9]);
 		array_push($url,$line[1]);
@@ -36,13 +36,13 @@ class IndexAction extends Action {
 		array_push($title,$line);
 		
 	}
-	//dump($url);
-	//dump($result);
+	dump($url);
+	dump($result);
 	for($i = 0;$i<10;$i++){
 		$out[$i]["url"]=$url[$i];
 		$out[$i]["title"]=$title[$i];
 	}
-	//dump($out);
+	dump($out);
 	if(count($result)==0){
 		$head[3] = "</br></br><h1>no result</h1>";
 	}
