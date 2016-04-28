@@ -42,7 +42,7 @@ class IndexAction extends Action {
 		$out[$i]["url"]=$url[$i];
 		$out[$i]["title"]=$title[$i*8].$title[$i*8+1].$title[$i*8+2].$title[$i*8+3].$title[$i*8+4].$title[$i*8+5].$title[$i*8+6].$title[$i*8+7];
 	}
-	
+	dump($out);
 	if(count($result)==0){
 		$head[3] = "</br></br><h1>no result</h1>";
 	}
