@@ -36,7 +36,8 @@ class IndexAction extends Action {
 		array_push($title,$line[1]);
 		
 	}
-	
+	dump($url)
+	dump($result)
 	for($i = 0;$i<10;$i++){
 		$out[$i]["url"]=$url[$i];
 		$out[$i]["title"]=$title[$i];
