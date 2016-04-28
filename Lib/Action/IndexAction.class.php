@@ -40,7 +40,7 @@ class IndexAction extends Action {
 	dump($result);
 	for($i = 0;$i<10;$i++){
 		$out[$i]["url"]=$url[$i];
-		$out[$i]["title"]=$title[$i];
+		$out[$i]["title"]=$title[$i*8].$title[$i*8+1].$title[$i*8+2].$title[$i*8+3].$title[$i*8+4].$title[$i*8+5].$title[$i*8+6].$title[$i*8+7];
 	}
 	
 	if(count($result)==0){
